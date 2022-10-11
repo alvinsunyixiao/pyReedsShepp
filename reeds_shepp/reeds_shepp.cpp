@@ -828,25 +828,25 @@ struct __pyx_obj_11reeds_shepp___pyx_scope_struct_1_type;
 
 /* "core.pxd":3
  * cimport cython
- * 
+ *
  * ctypedef int (*ReedsSheppPathSamplingCallback)(double q[5], void* user_data)             # <<<<<<<<<<<<<<
  * ctypedef int (*ReedsSheppPathTypeCallback) (int t, double l, void* user_data)
- * 
+ *
  */
 typedef int (*__pyx_t_4core_ReedsSheppPathSamplingCallback)(double *, void *);
 
 /* "core.pxd":4
- * 
+ *
  * ctypedef int (*ReedsSheppPathSamplingCallback)(double q[5], void* user_data)
  * ctypedef int (*ReedsSheppPathTypeCallback) (int t, double l, void* user_data)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef extern from "reeds_shepp.h":
  */
 typedef int (*__pyx_t_4core_ReedsSheppPathTypeCallback)(int, double, void *);
 
 /* "reeds_shepp.pyx":46
  * RIGHT = 3
- * 
+ *
  * cdef class PyReedsSheppPath:             # <<<<<<<<<<<<<<
  *     cdef ReedsSheppStateSpace *thisptr
  *     cdef double _q0[3]
@@ -861,10 +861,10 @@ struct __pyx_obj_11reeds_shepp_PyReedsSheppPath {
 
 /* "reeds_shepp.pyx":63
  *         return self.thisptr.distance(self._q0, self._q1)
- * 
+ *
  *     def sample(self, step_size):             # <<<<<<<<<<<<<<
  *         qs = []
- * 
+ *
  */
 struct __pyx_obj_11reeds_shepp___pyx_scope_struct__sample {
   PyObject_HEAD
@@ -874,10 +874,10 @@ struct __pyx_obj_11reeds_shepp___pyx_scope_struct__sample {
 
 /* "reeds_shepp.pyx":73
  *         return qs
- * 
+ *
  *     def type(self):             # <<<<<<<<<<<<<<
  *         ts = []
- * 
+ *
  */
 struct __pyx_obj_11reeds_shepp___pyx_scope_struct_1_type {
   PyObject_HEAD
@@ -1402,7 +1402,7 @@ static PyObject *__pyx_codeobj__13;
 
 /* "reeds_shepp.pyx":51
  *     cdef double _q1[3]
- * 
+ *
  *     def __init__(self, q0, q1, turning_radius):             # <<<<<<<<<<<<<<
  *         self.thisptr = new ReedsSheppStateSpace(turning_radius)
  *         for i in [0,1,2]:
@@ -1492,7 +1492,7 @@ static int __pyx_pf_11reeds_shepp_16PyReedsSheppPath___init__(struct __pyx_obj_1
   __Pyx_RefNannySetupContext("__init__", 0);
 
   /* "reeds_shepp.pyx":52
- * 
+ *
  *     def __init__(self, q0, q1, turning_radius):
  *         self.thisptr = new ReedsSheppStateSpace(turning_radius)             # <<<<<<<<<<<<<<
  *         for i in [0,1,2]:
@@ -1525,7 +1525,7 @@ static int __pyx_pf_11reeds_shepp_16PyReedsSheppPath___init__(struct __pyx_obj_1
  *         for i in [0,1,2]:
  *             self._q0[i] = q0[i]             # <<<<<<<<<<<<<<
  *             self._q1[i] = q1[i]
- * 
+ *
  */
     __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_q0, __pyx_v_i); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
@@ -1538,7 +1538,7 @@ static int __pyx_pf_11reeds_shepp_16PyReedsSheppPath___init__(struct __pyx_obj_1
  *         for i in [0,1,2]:
  *             self._q0[i] = q0[i]
  *             self._q1[i] = q1[i]             # <<<<<<<<<<<<<<
- * 
+ *
  *     def __dealloc__(self):
  */
     __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_q1, __pyx_v_i); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 55, __pyx_L1_error)
@@ -1560,7 +1560,7 @@ static int __pyx_pf_11reeds_shepp_16PyReedsSheppPath___init__(struct __pyx_obj_1
 
   /* "reeds_shepp.pyx":51
  *     cdef double _q1[3]
- * 
+ *
  *     def __init__(self, q0, q1, turning_radius):             # <<<<<<<<<<<<<<
  *         self.thisptr = new ReedsSheppStateSpace(turning_radius)
  *         for i in [0,1,2]:
@@ -1582,10 +1582,10 @@ static int __pyx_pf_11reeds_shepp_16PyReedsSheppPath___init__(struct __pyx_obj_1
 
 /* "reeds_shepp.pyx":57
  *             self._q1[i] = q1[i]
- * 
+ *
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
  *         del self.thisptr
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1604,20 +1604,20 @@ static void __pyx_pf_11reeds_shepp_16PyReedsSheppPath_2__dealloc__(struct __pyx_
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
   /* "reeds_shepp.pyx":58
- * 
+ *
  *     def __dealloc__(self):
  *         del self.thisptr             # <<<<<<<<<<<<<<
- * 
+ *
  *     def distance(self):
  */
   delete __pyx_v_self->thisptr;
 
   /* "reeds_shepp.pyx":57
  *             self._q1[i] = q1[i]
- * 
+ *
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
  *         del self.thisptr
- * 
+ *
  */
 
   /* function exit code */
@@ -1626,10 +1626,10 @@ static void __pyx_pf_11reeds_shepp_16PyReedsSheppPath_2__dealloc__(struct __pyx_
 
 /* "reeds_shepp.pyx":60
  *         del self.thisptr
- * 
+ *
  *     def distance(self):             # <<<<<<<<<<<<<<
  *         return self.thisptr.distance(self._q0, self._q1)
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1652,10 +1652,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_4distance(struct __py
   __Pyx_RefNannySetupContext("distance", 0);
 
   /* "reeds_shepp.pyx":61
- * 
+ *
  *     def distance(self):
  *         return self.thisptr.distance(self._q0, self._q1)             # <<<<<<<<<<<<<<
- * 
+ *
  *     def sample(self, step_size):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1667,10 +1667,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_4distance(struct __py
 
   /* "reeds_shepp.pyx":60
  *         del self.thisptr
- * 
+ *
  *     def distance(self):             # <<<<<<<<<<<<<<
  *         return self.thisptr.distance(self._q0, self._q1)
- * 
+ *
  */
 
   /* function exit code */
@@ -1686,10 +1686,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_4distance(struct __py
 
 /* "reeds_shepp.pyx":63
  *         return self.thisptr.distance(self._q0, self._q1)
- * 
+ *
  *     def sample(self, step_size):             # <<<<<<<<<<<<<<
  *         qs = []
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1707,7 +1707,7 @@ static PyObject *__pyx_pw_11reeds_shepp_16PyReedsSheppPath_7sample(PyObject *__p
 
 /* "reeds_shepp.pyx":66
  *         qs = []
- * 
+ *
  *         def f(q):             # <<<<<<<<<<<<<<
  *             qs.append(q)
  *             return 0
@@ -1738,11 +1738,11 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample_f(PyObject *_
   __pyx_cur_scope = __pyx_outer_scope;
 
   /* "reeds_shepp.pyx":67
- * 
+ *
  *         def f(q):
  *             qs.append(q)             # <<<<<<<<<<<<<<
  *             return 0
- * 
+ *
  */
   if (unlikely(!__pyx_cur_scope->__pyx_v_qs)) { __Pyx_RaiseClosureNameError("qs"); __PYX_ERR(1, 67, __pyx_L1_error) }
   if (unlikely(__pyx_cur_scope->__pyx_v_qs == Py_None)) {
@@ -1755,7 +1755,7 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample_f(PyObject *_
  *         def f(q):
  *             qs.append(q)
  *             return 0             # <<<<<<<<<<<<<<
- * 
+ *
  *         self.thisptr.sample(self._q0, self._q1, step_size, sample_cb, <void*>f)
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1765,7 +1765,7 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample_f(PyObject *_
 
   /* "reeds_shepp.pyx":66
  *         qs = []
- * 
+ *
  *         def f(q):             # <<<<<<<<<<<<<<
  *             qs.append(q)
  *             return 0
@@ -1783,10 +1783,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample_f(PyObject *_
 
 /* "reeds_shepp.pyx":63
  *         return self.thisptr.distance(self._q0, self._q1)
- * 
+ *
  *     def sample(self, step_size):             # <<<<<<<<<<<<<<
  *         qs = []
- * 
+ *
  */
 
 static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample(struct __pyx_obj_11reeds_shepp_PyReedsSheppPath *__pyx_v_self, PyObject *__pyx_v_step_size) {
@@ -1807,10 +1807,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample(struct __pyx_
   }
 
   /* "reeds_shepp.pyx":64
- * 
+ *
  *     def sample(self, step_size):
  *         qs = []             # <<<<<<<<<<<<<<
- * 
+ *
  *         def f(q):
  */
   __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 64, __pyx_L1_error)
@@ -1821,7 +1821,7 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample(struct __pyx_
 
   /* "reeds_shepp.pyx":66
  *         qs = []
- * 
+ *
  *         def f(q):             # <<<<<<<<<<<<<<
  *             qs.append(q)
  *             return 0
@@ -1833,19 +1833,19 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample(struct __pyx_
 
   /* "reeds_shepp.pyx":70
  *             return 0
- * 
+ *
  *         self.thisptr.sample(self._q0, self._q1, step_size, sample_cb, <void*>f)             # <<<<<<<<<<<<<<
  *         return qs
- * 
+ *
  */
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_v_step_size); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(1, 70, __pyx_L1_error)
   __pyx_v_self->thisptr->sample(__pyx_v_self->_q0, __pyx_v_self->_q1, __pyx_t_2, __pyx_f_4core_sample_cb, ((void *)__pyx_v_f));
 
   /* "reeds_shepp.pyx":71
- * 
+ *
  *         self.thisptr.sample(self._q0, self._q1, step_size, sample_cb, <void*>f)
  *         return qs             # <<<<<<<<<<<<<<
- * 
+ *
  *     def type(self):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1855,10 +1855,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample(struct __pyx_
 
   /* "reeds_shepp.pyx":63
  *         return self.thisptr.distance(self._q0, self._q1)
- * 
+ *
  *     def sample(self, step_size):             # <<<<<<<<<<<<<<
  *         qs = []
- * 
+ *
  */
 
   /* function exit code */
@@ -1876,10 +1876,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_6sample(struct __pyx_
 
 /* "reeds_shepp.pyx":73
  *         return qs
- * 
+ *
  *     def type(self):             # <<<<<<<<<<<<<<
  *         ts = []
- * 
+ *
  */
 
 /* Python wrapper */
@@ -1897,7 +1897,7 @@ static PyObject *__pyx_pw_11reeds_shepp_16PyReedsSheppPath_9type(PyObject *__pyx
 
 /* "reeds_shepp.pyx":76
  *         ts = []
- * 
+ *
  *         def f(t, l):             # <<<<<<<<<<<<<<
  *             if t is not 0 : ts.append((t, l))
  *             return 0
@@ -1979,11 +1979,11 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_4type_f(PyObject *__p
   __pyx_cur_scope = __pyx_outer_scope;
 
   /* "reeds_shepp.pyx":77
- * 
+ *
  *         def f(t, l):
  *             if t is not 0 : ts.append((t, l))             # <<<<<<<<<<<<<<
  *             return 0
- * 
+ *
  */
   __pyx_t_1 = (__pyx_v_t != __pyx_int_0);
   __pyx_t_2 = (__pyx_t_1 != 0);
@@ -2009,7 +2009,7 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_4type_f(PyObject *__p
  *         def f(t, l):
  *             if t is not 0 : ts.append((t, l))
  *             return 0             # <<<<<<<<<<<<<<
- * 
+ *
  *         self.thisptr.type(self._q0, self._q1, type_cb, <void*>f)
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2019,7 +2019,7 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_4type_f(PyObject *__p
 
   /* "reeds_shepp.pyx":76
  *         ts = []
- * 
+ *
  *         def f(t, l):             # <<<<<<<<<<<<<<
  *             if t is not 0 : ts.append((t, l))
  *             return 0
@@ -2038,10 +2038,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_4type_f(PyObject *__p
 
 /* "reeds_shepp.pyx":73
  *         return qs
- * 
+ *
  *     def type(self):             # <<<<<<<<<<<<<<
  *         ts = []
- * 
+ *
  */
 
 static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_8type(struct __pyx_obj_11reeds_shepp_PyReedsSheppPath *__pyx_v_self) {
@@ -2061,10 +2061,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_8type(struct __pyx_ob
   }
 
   /* "reeds_shepp.pyx":74
- * 
+ *
  *     def type(self):
  *         ts = []             # <<<<<<<<<<<<<<
- * 
+ *
  *         def f(t, l):
  */
   __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 74, __pyx_L1_error)
@@ -2075,7 +2075,7 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_8type(struct __pyx_ob
 
   /* "reeds_shepp.pyx":76
  *         ts = []
- * 
+ *
  *         def f(t, l):             # <<<<<<<<<<<<<<
  *             if t is not 0 : ts.append((t, l))
  *             return 0
@@ -2087,19 +2087,19 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_8type(struct __pyx_ob
 
   /* "reeds_shepp.pyx":80
  *             return 0
- * 
+ *
  *         self.thisptr.type(self._q0, self._q1, type_cb, <void*>f)             # <<<<<<<<<<<<<<
  *         return tuple(ts)
- * 
+ *
  */
   __pyx_v_self->thisptr->type(__pyx_v_self->_q0, __pyx_v_self->_q1, __pyx_f_4core_type_cb, ((void *)__pyx_v_f));
 
   /* "reeds_shepp.pyx":81
- * 
+ *
  *         self.thisptr.type(self._q0, self._q1, type_cb, <void*>f)
  *         return tuple(ts)             # <<<<<<<<<<<<<<
- * 
- * 
+ *
+ *
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyList_AsTuple(__pyx_cur_scope->__pyx_v_ts); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 81, __pyx_L1_error)
@@ -2110,10 +2110,10 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_8type(struct __pyx_ob
 
   /* "reeds_shepp.pyx":73
  *         return qs
- * 
+ *
  *     def type(self):             # <<<<<<<<<<<<<<
  *         ts = []
- * 
+ *
  */
 
   /* function exit code */
@@ -2237,11 +2237,11 @@ static PyObject *__pyx_pf_11reeds_shepp_16PyReedsSheppPath_12__setstate_cython__
 }
 
 /* "reeds_shepp.pyx":84
- * 
- * 
+ *
+ *
  * def path_length(q0, q1, rho):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).distance()
- * 
+ *
  */
 
 /* Python wrapper */
@@ -2326,10 +2326,10 @@ static PyObject *__pyx_pf_11reeds_shepp_path_length(CYTHON_UNUSED PyObject *__py
   __Pyx_RefNannySetupContext("path_length", 0);
 
   /* "reeds_shepp.pyx":85
- * 
+ *
  * def path_length(q0, q1, rho):
  *     return PyReedsSheppPath(q0, q1, rho).distance()             # <<<<<<<<<<<<<<
- * 
+ *
  * def path_sample(q0, q1, rho, step_size):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2370,11 +2370,11 @@ static PyObject *__pyx_pf_11reeds_shepp_path_length(CYTHON_UNUSED PyObject *__py
   goto __pyx_L0;
 
   /* "reeds_shepp.pyx":84
- * 
- * 
+ *
+ *
  * def path_length(q0, q1, rho):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).distance()
- * 
+ *
  */
 
   /* function exit code */
@@ -2392,10 +2392,10 @@ static PyObject *__pyx_pf_11reeds_shepp_path_length(CYTHON_UNUSED PyObject *__py
 
 /* "reeds_shepp.pyx":87
  *     return PyReedsSheppPath(q0, q1, rho).distance()
- * 
+ *
  * def path_sample(q0, q1, rho, step_size):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).sample(step_size)
- * 
+ *
  */
 
 /* Python wrapper */
@@ -2491,10 +2491,10 @@ static PyObject *__pyx_pf_11reeds_shepp_2path_sample(CYTHON_UNUSED PyObject *__p
   __Pyx_RefNannySetupContext("path_sample", 0);
 
   /* "reeds_shepp.pyx":88
- * 
+ *
  * def path_sample(q0, q1, rho, step_size):
  *     return PyReedsSheppPath(q0, q1, rho).sample(step_size)             # <<<<<<<<<<<<<<
- * 
+ *
  * def path_type(q0, q1, rho):
  */
   __Pyx_XDECREF(__pyx_r);
@@ -2536,10 +2536,10 @@ static PyObject *__pyx_pf_11reeds_shepp_2path_sample(CYTHON_UNUSED PyObject *__p
 
   /* "reeds_shepp.pyx":87
  *     return PyReedsSheppPath(q0, q1, rho).distance()
- * 
+ *
  * def path_sample(q0, q1, rho, step_size):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).sample(step_size)
- * 
+ *
  */
 
   /* function exit code */
@@ -2557,7 +2557,7 @@ static PyObject *__pyx_pf_11reeds_shepp_2path_sample(CYTHON_UNUSED PyObject *__p
 
 /* "reeds_shepp.pyx":90
  *     return PyReedsSheppPath(q0, q1, rho).sample(step_size)
- * 
+ *
  * def path_type(q0, q1, rho):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).type()
  */
@@ -2644,7 +2644,7 @@ static PyObject *__pyx_pf_11reeds_shepp_4path_type(CYTHON_UNUSED PyObject *__pyx
   __Pyx_RefNannySetupContext("path_type", 0);
 
   /* "reeds_shepp.pyx":91
- * 
+ *
  * def path_type(q0, q1, rho):
  *     return PyReedsSheppPath(q0, q1, rho).type()             # <<<<<<<<<<<<<<
  */
@@ -2687,7 +2687,7 @@ static PyObject *__pyx_pf_11reeds_shepp_4path_type(CYTHON_UNUSED PyObject *__pyx
 
   /* "reeds_shepp.pyx":90
  *     return PyReedsSheppPath(q0, q1, rho).sample(step_size)
- * 
+ *
  * def path_type(q0, q1, rho):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).type()
  */
@@ -2707,7 +2707,7 @@ static PyObject *__pyx_pf_11reeds_shepp_4path_type(CYTHON_UNUSED PyObject *__pyx
 
 /* "core.pxd":13
  *         void type(double q0[3], double q1[3], ReedsSheppPathTypeCallback cb, void* user_data)
- * 
+ *
  * cdef inline int sample_cb(double q[5], void* f):             # <<<<<<<<<<<<<<
  *     qn = (q[0], q[1], q[2], q[3], q[4])
  *     return (<object>f)(qn)
@@ -2727,11 +2727,11 @@ static CYTHON_INLINE int __pyx_f_4core_sample_cb(double *__pyx_v_q, void *__pyx_
   __Pyx_RefNannySetupContext("sample_cb", 0);
 
   /* "core.pxd":14
- * 
+ *
  * cdef inline int sample_cb(double q[5], void* f):
  *     qn = (q[0], q[1], q[2], q[3], q[4])             # <<<<<<<<<<<<<<
  *     return (<object>f)(qn)
- * 
+ *
  */
   __pyx_t_1 = PyFloat_FromDouble((__pyx_v_q[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -2767,7 +2767,7 @@ static CYTHON_INLINE int __pyx_f_4core_sample_cb(double *__pyx_v_q, void *__pyx_
  * cdef inline int sample_cb(double q[5], void* f):
  *     qn = (q[0], q[1], q[2], q[3], q[4])
  *     return (<object>f)(qn)             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef inline int type_cb(int t, double l, void* f):
  */
   __Pyx_INCREF(((PyObject *)__pyx_v_f));
@@ -2793,7 +2793,7 @@ static CYTHON_INLINE int __pyx_f_4core_sample_cb(double *__pyx_v_q, void *__pyx_
 
   /* "core.pxd":13
  *         void type(double q0[3], double q1[3], ReedsSheppPathTypeCallback cb, void* user_data)
- * 
+ *
  * cdef inline int sample_cb(double q[5], void* f):             # <<<<<<<<<<<<<<
  *     qn = (q[0], q[1], q[2], q[3], q[4])
  *     return (<object>f)(qn)
@@ -2817,7 +2817,7 @@ static CYTHON_INLINE int __pyx_f_4core_sample_cb(double *__pyx_v_q, void *__pyx_
 
 /* "core.pxd":17
  *     return (<object>f)(qn)
- * 
+ *
  * cdef inline int type_cb(int t, double l, void* f):             # <<<<<<<<<<<<<<
  *     return (<object>f)(t, l)
  */
@@ -2835,7 +2835,7 @@ static CYTHON_INLINE int __pyx_f_4core_type_cb(int __pyx_v_t, double __pyx_v_l, 
   __Pyx_RefNannySetupContext("type_cb", 0);
 
   /* "core.pxd":18
- * 
+ *
  * cdef inline int type_cb(int t, double l, void* f):
  *     return (<object>f)(t, l)             # <<<<<<<<<<<<<<
  */
@@ -2900,7 +2900,7 @@ static CYTHON_INLINE int __pyx_f_4core_type_cb(int __pyx_v_t, double __pyx_v_l, 
 
   /* "core.pxd":17
  *     return (<object>f)(qn)
- * 
+ *
  * cdef inline int type_cb(int t, double l, void* f):             # <<<<<<<<<<<<<<
  *     return (<object>f)(t, l)
  */
@@ -2940,9 +2940,9 @@ static void __pyx_tp_dealloc_11reeds_shepp_PyReedsSheppPath(PyObject *o) {
   {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
-    ++Py_REFCNT(o);
+    Py_SET_REFCNT(o, Py_REFCNT(o) + 1);
     __pyx_pw_11reeds_shepp_16PyReedsSheppPath_3__dealloc__(o);
-    --Py_REFCNT(o);
+    Py_SET_REFCNT(o, Py_REFCNT(o) - 1);
     PyErr_Restore(etype, eval, etb);
   }
   (*Py_TYPE(o)->tp_free)(o);
@@ -3363,7 +3363,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "reeds_shepp.pyx":66
  *         qs = []
- * 
+ *
  *         def f(q):             # <<<<<<<<<<<<<<
  *             qs.append(q)
  *             return 0
@@ -3375,7 +3375,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "reeds_shepp.pyx":76
  *         ts = []
- * 
+ *
  *         def f(t, l):             # <<<<<<<<<<<<<<
  *             if t is not 0 : ts.append((t, l))
  *             return 0
@@ -3405,11 +3405,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__7);
 
   /* "reeds_shepp.pyx":84
- * 
- * 
+ *
+ *
  * def path_length(q0, q1, rho):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).distance()
- * 
+ *
  */
   __pyx_tuple__8 = PyTuple_Pack(3, __pyx_n_s_q0, __pyx_n_s_q1, __pyx_n_s_rho); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(1, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
@@ -3418,10 +3418,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "reeds_shepp.pyx":87
  *     return PyReedsSheppPath(q0, q1, rho).distance()
- * 
+ *
  * def path_sample(q0, q1, rho, step_size):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).sample(step_size)
- * 
+ *
  */
   __pyx_tuple__10 = PyTuple_Pack(4, __pyx_n_s_q0, __pyx_n_s_q1, __pyx_n_s_rho, __pyx_n_s_step_size); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(1, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
@@ -3430,7 +3430,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "reeds_shepp.pyx":90
  *     return PyReedsSheppPath(q0, q1, rho).sample(step_size)
- * 
+ *
  * def path_type(q0, q1, rho):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).type()
  */
@@ -3748,7 +3748,7 @@ if (!__Pyx_RefNanny) {
 
   /* "reeds_shepp.pyx":42
  * from core cimport ReedsSheppStateSpace, sample_cb, type_cb
- * 
+ *
  * LEFT = 1             # <<<<<<<<<<<<<<
  * STRAIGHT = 2
  * RIGHT = 3
@@ -3756,11 +3756,11 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_LEFT, __pyx_int_1) < 0) __PYX_ERR(1, 42, __pyx_L1_error)
 
   /* "reeds_shepp.pyx":43
- * 
+ *
  * LEFT = 1
  * STRAIGHT = 2             # <<<<<<<<<<<<<<
  * RIGHT = 3
- * 
+ *
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_STRAIGHT, __pyx_int_2) < 0) __PYX_ERR(1, 43, __pyx_L1_error)
 
@@ -3768,17 +3768,17 @@ if (!__Pyx_RefNanny) {
  * LEFT = 1
  * STRAIGHT = 2
  * RIGHT = 3             # <<<<<<<<<<<<<<
- * 
+ *
  * cdef class PyReedsSheppPath:
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_RIGHT, __pyx_int_3) < 0) __PYX_ERR(1, 44, __pyx_L1_error)
 
   /* "reeds_shepp.pyx":84
- * 
- * 
+ *
+ *
  * def path_length(q0, q1, rho):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).distance()
- * 
+ *
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_11reeds_shepp_1path_length, NULL, __pyx_n_s_reeds_shepp); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -3787,10 +3787,10 @@ if (!__Pyx_RefNanny) {
 
   /* "reeds_shepp.pyx":87
  *     return PyReedsSheppPath(q0, q1, rho).distance()
- * 
+ *
  * def path_sample(q0, q1, rho, step_size):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).sample(step_size)
- * 
+ *
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_11reeds_shepp_3path_sample, NULL, __pyx_n_s_reeds_shepp); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -3799,7 +3799,7 @@ if (!__Pyx_RefNanny) {
 
   /* "reeds_shepp.pyx":90
  *     return PyReedsSheppPath(q0, q1, rho).sample(step_size)
- * 
+ *
  * def path_type(q0, q1, rho):             # <<<<<<<<<<<<<<
  *     return PyReedsSheppPath(q0, q1, rho).type()
  */
@@ -3820,7 +3820,7 @@ if (!__Pyx_RefNanny) {
 
   /* "core.pxd":17
  *     return (<object>f)(qn)
- * 
+ *
  * cdef inline int type_cb(int t, double l, void* f):             # <<<<<<<<<<<<<<
  *     return (<object>f)(t, l)
  */
